@@ -1,0 +1,15 @@
+---
+title: Memories
+layout: page
+pageOrder: 1
+---
+
+  each doc in getCollection('memories').toJSON()
+    .row
+        .span2
+            h3!= doc.title
+        .span8
+            article#memories.memories
+                section
+                    .memories-content!= doc.contentRendered 
+                  

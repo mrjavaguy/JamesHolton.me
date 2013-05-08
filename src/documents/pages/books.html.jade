@@ -1,0 +1,14 @@
+---
+title: Books
+layout: page
+pageOrder: 5
+---
+  
+  each doc in getCollection('books').toJSON()
+    .row
+        .span2
+            a(href=doc.url) 
+                img.img-polaroid(src=doc.imageurl)
+        .span6
+            h3= doc.title
+            p= doc.author

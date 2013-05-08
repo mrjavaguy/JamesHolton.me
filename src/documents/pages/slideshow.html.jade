@@ -1,0 +1,26 @@
+---
+title: SlideShow
+layout: page
+pageOrder: 4
+---
+.carousel.slide#myCarousel
+    ol.carousel-indicators.hide
+         each image, i in site.images
+            if i == 0
+                li(data-target="#myCarousel", data-slide-to="#{i}").active
+            else
+                li(data-target="#myCarousel", data-slide-to="#{i}")
+    .carousel-inner
+         each image, i in site.images
+            if i == 0
+                .active.item.peopleCarouselImg
+                    img(src="/images/#{image.imageName}", title="#{image.title}")
+                    .carousel-caption
+                        p #{image.title}
+            else
+                .item.peopleCarouselImg
+                    img(src="/images/#{image.imageName}", title="#{image.title}")
+                    .carousel-caption
+                        p #{image.title}
+    a(href="#myCarousel", data-slide="prev").carousel-control.left &lsaquo;
+    a(href="#myCarousel", data-slide="next").carousel-control.right &rsaquo;

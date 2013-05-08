@@ -1,0 +1,15 @@
+---
+title: Gallery
+layout: page
+pageOrder: 3
+---
+
+.row
+    .span12
+        ul.thumbnails
+            each image in site.images
+                li
+                    .peopleCarouselImg
+                        img(data-original="/images/#{image.imageName}", title="#{image.title}", src="/images/grey.gif").img-polaroid.lazy
+
+
