@@ -93,7 +93,7 @@ call :SelectNodeVersion
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd %DEPLOYMENT_TARGET%
   call !NPM_CMD! cache clean
-  call !NPM_CMD! install --production
+  call !NPM_CMD! install --production --force
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
