@@ -1,0 +1,15 @@
+Mon May 13 2013 19:15:26 GMT-0700 (Pacific Daylight Time):
+{ [Error: First site must be created on portal]
+  stack: [Getter/Setter],
+  __frame: 
+   { name: '__3',
+     line: 193,
+     file: 'C:\\Users\\Eric\\AppData\\Roaming\\npm\\node_modules\\azure-cli\\lib\\commands\\site._js',
+     prev: undefined,
+     active: false,
+     offset: 33,
+     col: 10 },
+  rawStack: [Getter] }
+Error: First site must be created on portal
+    at promptForLocation (C:\Users\Eric\AppData\Roaming\npm\node_modules\azure-cli\lib\commands\site._js:319:26)
+    at __3 (C:\Users\Eric\AppData\Roaming\npm\node_modules\azure-cli\lib\commands\site._js:226:10)
